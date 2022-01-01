@@ -6,17 +6,17 @@ module.exports = {
     return [
       {
         source: "/old-blog/:path*",
-        destination: "/new-sexy-blog/:path",
+        destination: "/new-sexy-blog/:path*",
         permanent: false,
-      }
+      },
     ];
   },
   async rewrites() {
     return [
       {
         source: "/api/movies",
-        destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+        destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
       },
     ];
-  }
-}
+  },
+};
